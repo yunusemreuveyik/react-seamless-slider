@@ -1,6 +1,6 @@
 {
   "name": "react-seamless-slider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A seamless infinite scrolling slider component for React with TypeScript support. Fixed version with SSR compatibility for Next.js.",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -51,11 +51,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/react-seamless-slider.git"
+    "url": "git+https://github.com/yunusemreuveyik/react-seamless-slider.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/react-seamless-slider/issues"
+    "url": "https://github.com/yunusemreuveyik/react-seamless-slider/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/react-seamless-slider#readme"
+  "homepage": "https://github.com/yunusemreuveyik/react-seamless-slider#readme"
 }
-
