@@ -1,0 +1,61 @@
+{
+  "name": "react-seamless-slider",
+  "version": "1.0.1",
+  "description": "A seamless infinite scrolling slider component for React with TypeScript support. Fixed version with SSR compatibility for Next.js.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./InfiniteSlider.css": "./dist/InfiniteSlider.css"
+  },
+  "scripts": {
+    "build": "npm run build:types && npm run build:copy-css",
+    "build:types": "tsc",
+    "build:copy-css": "node -e \"require('fs').mkdirSync('dist', {recursive: true}); require('fs').copyFileSync('src/InfiniteSlider.css', 'dist/InfiniteSlider.css')\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "slider",
+    "carousel",
+    "infinite",
+    "seamless",
+    "scroll",
+    "typescript",
+    "component",
+    "nextjs",
+    "ssr",
+    "server-side-rendering"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/react-seamless-slider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/react-seamless-slider/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/react-seamless-slider#readme"
+}
+

@@ -1,0 +1,177 @@
+/* Infinite Slider Styles */
+.infinite-slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.infinite-slider-wrapper {
+  position: relative;
+}
+
+.infinite-slider-track-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.infinite-slider-track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  /* Animation will be added via class after width is calculated */
+}
+
+.infinite-slider-track.infinite-slider-ready {
+  animation: infinite-slider-scroll var(--scroll-duration, 30s) linear infinite;
+}
+
+.infinite-slider-pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infinite-slider-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--total-width, 0px)));
+  }
+}
+
+.infinite-slider-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 = 0.75rem = 12px */
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.infinite-slider-item:hover {
+  opacity: 1;
+}
+
+.infinite-slider-logo,
+.infinite-slider-logo-placeholder {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.infinite-slider-logo-placeholder {
+  background-color: #e5e5e5;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] .infinite-slider-logo-placeholder,
+.dark .infinite-slider-logo-placeholder {
+  background-color: #262626;
+}
+
+.infinite-slider-invert-dark {
+  filter: invert(0);
+}
+
+[data-theme="dark"] .infinite-slider-invert-dark,
+.dark .infinite-slider-invert-dark {
+  filter: invert(1);
+}
+
+.infinite-slider-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #525252;
+}
+
+[data-theme="dark"] .infinite-slider-text,
+.dark .infinite-slider-text {
+  color: #a3a3a3;
+}
+
+/* Gradient masks */
+.infinite-slider-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 96px; /* w-24 = 6rem = 96px */
+  z-index: 10;
+  pointer-events: none;
+}
+
+.infinite-slider-gradient-left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--slider-bg-color, #ffffff),
+    transparent
+  );
+}
+
+[dir="rtl"] .infinite-slider-gradient-left {
+  left: auto;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--slider-bg-color, #ffffff),
+    transparent
+  );
+}
+
+.infinite-slider-gradient-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--slider-bg-color, #ffffff),
+    transparent
+  );
+}
+
+[dir="rtl"] .infinite-slider-gradient-right {
+  right: auto;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--slider-bg-color, #ffffff),
+    transparent
+  );
+}
+
+[data-theme="dark"] .infinite-slider-gradient-left,
+.dark .infinite-slider-gradient-left,
+[data-theme="dark"] .infinite-slider-gradient-right,
+.dark .infinite-slider-gradient-right {
+  background: linear-gradient(
+    to right,
+    var(--slider-bg-color-dark, #0a0a0a),
+    transparent
+  );
+}
+
+[data-theme="dark"] .infinite-slider-gradient-right,
+.dark .infinite-slider-gradient-right {
+  background: linear-gradient(
+    to left,
+    var(--slider-bg-color-dark, #0a0a0a),
+    transparent
+  );
+}
+
+[dir="rtl"][data-theme="dark"] .infinite-slider-gradient-left,
+[dir="rtl"].dark .infinite-slider-gradient-left {
+  background: linear-gradient(
+    to left,
+    var(--slider-bg-color-dark, #0a0a0a),
+    transparent
+  );
+}
+
+[dir="rtl"][data-theme="dark"] .infinite-slider-gradient-right,
+[dir="rtl"].dark .infinite-slider-gradient-right {
+  background: linear-gradient(
+    to right,
+    var(--slider-bg-color-dark, #0a0a0a),
+    transparent
+  );
+}
+
