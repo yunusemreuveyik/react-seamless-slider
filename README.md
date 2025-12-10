@@ -2,6 +2,8 @@
 
 A seamless infinite scrolling slider component for React with TypeScript support. Features smooth, continuous scrolling without any visible jumps or blinks. Perfect for displaying logos, testimonials, or any content that needs to scroll infinitely.
 
+![React Seamless Slider Demo](https://raw.githubusercontent.com/yunusemreuveyik/react-seamless-slider/main/assets/demo.gif)
+
 ## Features
 
 - ✨ **Seamless infinite scroll** - No visible jumps or resets

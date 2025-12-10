@@ -1,6 +1,6 @@
 {
   "name": "react-seamless-slider",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A seamless infinite scrolling slider component for React with TypeScript support. Fixed version with SSR compatibility for Next.js.",
   "main": "dist/index.js",
   "module": "dist/index.js",
